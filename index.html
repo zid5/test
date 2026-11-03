@@ -7,23 +7,36 @@
 	<title>Login page</title>
 </head>
 <body>
-	<main>
-		<h1>Sign in</h1>
-		<form action="#" method="post">
-			<p>
-				<label for="username">Username</label><br>
-				<input type="text" id="username" name="username" autocomplete="username" required>
-			</p>
-			<p>
-				<label for="password">Password</label><br>
-				<input type="password" id="password" name="password" autocomplete="current-password" required>
-			</p>
-			<p>
-				<label><input type="checkbox" name="remember"> Remember me</label>
-			</p>
-			<button type="submit">Log in</button>
-		</form>
-		<p><a href="#">Forgot your password?</a></p>
+	<main class="login-page">
+		<section class="login-card" aria-labelledby="login-title">
+			<div class="brand-mark" aria-hidden="true">
+				<span></span>
+			</div>
+			<p class="eyebrow">YOUR ACCOUNT</p>
+			<h1 id="login-title">Welcome back</h1>
+			<p class="login-intro">Sign in to continue to your account.</p>
+
+			<form class="login-form" action="#" method="post">
+				<div class="form-field">
+					<label for="username">Username</label>
+					<input type="text" id="username" name="username" autocomplete="username" placeholder="Enter your username" required>
+				</div>
+				<div class="form-field">
+					<div class="field-heading">
+						<label for="password">Password</label>
+						<a href="#">Forgot password?</a>
+					</div>
+					<input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter your password" required>
+				</div>
+				<label class="remember-option">
+					<input type="checkbox" name="remember">
+					<span>Remember me</span>
+				</label>
+				<button type="submit">Sign in <span aria-hidden="true">→</span></button>
+			</form>
+
+			<p class="login-footer">Need help? Contact your account administrator.</p>
+		</section>
 	</main>
 </body>
 </html>
