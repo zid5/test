@@ -1,0 +1,83 @@
+/* Shared page layout and sensible defaults for index.html */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	min-width: 320px;
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background: #f8fafc;
+	color: #1e293b;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	line-height: 1.6;
+}
+
+header,
+main,
+footer {
+	width: min(100% - 2rem, 72rem);
+	margin-inline: auto;
+}
+
+header,
+footer {
+	padding-block: 1.25rem;
+}
+
+main {
+	padding-block: 2rem;
+}
+
+h1,
+h2,
+h3 {
+	color: #0f172a;
+	line-height: 1.2;
+}
+
+img,
+video,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	color: #2563eb;
+	text-underline-offset: 0.2em;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+:focus-visible {
+	outline: 3px solid #60a5fa;
+	outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+	header,
+	main,
+	footer {
+		width: min(100% - 1.25rem, 72rem);
+	}
+
+	main {
+		padding-block: 1.25rem;
+	}
+}
